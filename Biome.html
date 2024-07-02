@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* gradient generator */
+            background: linear-gradient(135deg, #0D1B2A, #283845, #4CAF50, #8E763F);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Biome BEGINN */
+        /* 1.row beginn */
+        .saltPitsPic {
+            position: absolute;
+            height: 25%;
+            top: 10vh;
+            left: 5vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .saltPitsH4 {
+            position: absolute;
+            top: 7vh;
+            left: 5vh;
+        }
+
+        .sandblastedCorridorsPic {
+            position: absolute;
+            height: 25%;
+            top: 40vh;
+            left: 5vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .sandblastedCorridorsH4 {
+            position: absolute;
+            top: 37vh;
+            left: 5vh;
+        }
+
+        .hollowBoughPic {
+            position: absolute;
+            height: 25%;
+            top: 70vh;
+            left: 5vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .hollowBoughH4 {
+            position: absolute;
+            top: 67vh;
+            left: 5vh;
+        }
+
+        /* 1. row ende*/
+
+        /* 2.row beginn */
+        .azureWealdPic {
+            position: absolute;
+            height: 25%;
+            top: 10vh;
+            left: 60vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .azureWealdH4 {
+            position: absolute;
+            top: 7vh;
+            left: 60vh;
+        }
+
+        .magmaCorePic {
+            position: absolute;
+            height: 25%;
+            top: 40vh;
+            left: 60vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .magmaH4 {
+            position: absolute;
+            top: 37vh;
+            left: 60vh;
+        }
+
+        .radioactiveExclusionZonePic {
+            position: absolute;
+            height: 25%;
+            top: 70vh;
+            left: 60vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .radioactiveH4 {
+            position: absolute;
+            top: 67vh;
+            left: 60vh;
+        }
+
+        /* 2. row ende */
+
+        /* 3.row beginn */
+        .fungusBogsPic {
+            position: absolute;
+            height: 25%;
+            top: 10vh;
+            left: 115vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .fungusBogsH4 {
+            position: absolute;
+            top: 7vh;
+            left: 115vh;
+        }
+
+        .crystallineCavernsPic {
+            position: absolute;
+            height: 25%;
+            top: 70vh;
+            left: 115vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .crystallineH4 {
+            position: absolute;
+            top: 67vh;
+            left: 115vh;
+        }
+
+        .denseBioPic {
+            position: absolute;
+            height: 25%;
+            top: 40vh;
+            left: 115vh;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+
+        .denseBioH4 {
+            position: absolute;
+            top: 37vh;
+            left: 115vh;
+        }
+
+        /* 3. row ende */
+
+        .rechterBiomeDiv {
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 6em;
+            position: absolute;
+            top: 15vh;
+            right: 20vh;
+        }
+
+        /* biome Ende */
+    </style>
+
+</head>
+
+<body class="fredoka-font">
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" style="color: #FFA500;" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- navbar Ende -->
+
+    <!-- in div für alle: weisser text, posi per klassen, tooltip übernommen von chars, w3 copy -->
+    <div class="text-white">
+        <!-- 1. spalte beginn-->
+        <div>
+            <h4 class="saltPitsH4">Salzgruben</h4>
+            <!-- auf eigene seite weil gemütlicher und wurscht -->
+            <!-- title = tooltip text -->
+            <a href="salt_Pits.html" target="_blank" data-toggle="tooltip" title="Eine trockene, salzverkrustete Landschaft mit kristallinen Strukturen und weißem, sprödem Boden.">
+                <img class="saltPitsPic" src="Assets/DRG Pics/DRG_SaltPits.jpg" alt="Salt Pits Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="sandblastedCorridorsH4">Sandgestrahlte Korridore</h4>
+            <a href="sandblasted_Corridors.html" target="_blank" data-toggle="tooltip"
+                title="Eine wüstenartige Region mit sandigen Böden und ständigen Sandstürmen.">
+                <img class="sandblastedCorridorsPic" src="Assets/DRG Pics/DRG_Screenshot_Sandy.png"
+                    alt="Sandblasted Corridors Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="hollowBoughH4">Hohler Ast</h4>
+            <a href="Hollow_Bough.html" target="_blank" data-toggle="tooltip" title="Eine stark bewaldete Zone mit gigantischen Baumstümpfen und dichten Blätterdächern. Sehr vertikal und voller Schlupflöcher.">
+                <img class="hollowBoughPic" src="Assets/DRG Pics/DRG_Hollow_Bough.jpg" alt="Hollow Bough Pic">
+            </a>
+        </div>
+        <!-- 1. spalte ende-->
+
+        <!-- 2. spalte beginn-->
+        <div>
+            <h4 class="azureWealdH4">Azur Wald</h4>
+            <a href="azure_weald.html" target="_blank" data-toggle="tooltip" title="Ein wunderschönes, aber tödliches Biome mit leuchtenden blauen Pilzen und schwebenden Partikeln. Die Umgebung ist dicht und kann desorientierend wirken.">
+                <img class="azureWealdPic" src="Assets/DRG Pics/azureWeald.jpg" alt="Azure Weald Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="magmaH4">Magmakern</h4>
+            <a href="Magma_Core.html" target="_blank" data-toggle="tooltip" title="Eine heiße, vulkanische Umgebung mit fließender Lava und brennenden Oberflächen.">
+                <img class="magmaCorePic" src="Assets/DRG Pics/DRG_Screenshot_Magma.png" alt="Magma Core Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="radioactiveH4">Radioaktive Asusschlusszone</h4>
+            <a href="Radioactive_Exclusion_Zone.html" target="_blank" data-toggle="tooltip" title="Ein hochgradig verstrahltes Gebiet mit leuchtenden Kristallen und radioaktivem Abfall.">
+                <img class="radioactiveExclusionZonePic" src="Assets/DRG Pics/DRG_Wallpaper_RadioactiveZone.jpg"
+                    alt="Radioactive Zone Pic">
+            </a>
+        </div>
+        <!-- 2. spalte ende-->
+
+        <!-- 3. spalte beginn-->
+        <div>
+            <h4 class="fungusBogsH4">Pilzsümpfe</h4>
+            <a href="fungus_Bogs.html" target="_blank" data-toggle="tooltip" title="Eine feuchte und sumpfige Umgebung mit großen Pilzen und schlammigen Böden.">
+                <img class="fungusBogsPic" src="Assets/DRG Pics/DRG_Screenshot_Fungus.png" alt="Fungus Bogs Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="crystallineH4">Kristallhöhlen</h4>
+            <a href="Crystalline_caverns.html" target="_blank" data-toggle="tooltip" title="Ein glitzernder Untergrund voller funkelnder Kristalle. Die Wände und Böden bestehen aus verschiedenen Mineralien.">
+                <img class="crystallineCavernsPic" src="Assets/DRG Pics/DRG_Crystalline_Caverns.png"
+                    alt="Crystalline Caverns Pic">
+            </a>
+        </div>
+        <div>
+            <h4 class="denseBioH4">Dichte Biozone</h4>
+            <a href="Dense_Biozone.html" target="_blank" data-toggle="tooltip" title="Ein dicht bewachsener unterirdischer Dschungel mit üppiger Vegetation und riesigen Wurzeln.">
+                <img class="denseBioPic" src="Assets/DRG Pics/DRG_Wallpaper_DenseBiozone.jpg" alt="Dense Bio Zone Pic">
+            </a>
+        </div>
+        <!-- 3. spalte ende -->
+
+        <!-- schrift rechts BIOME beginn -->
+        <p class="rechterBiomeDiv" style="color: #FFA500;">B<br>i<br>o<br>m<br>e<br></p>
+        <!-- schrift rechts BIOME ende (unnädiga comment, trotzdem durchzong) -->
+
+</body>
+
+</html>

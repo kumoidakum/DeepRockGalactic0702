@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Willkommen Beginn */
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            background-image: url(DRG_Azure_weald_preview.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* scroll für ganzes pic mitscrollen... ergibt auf amoi sinn... */
+            background-attachment: scroll;
+            background-position: center;
+        }
+
+        /* table w3 copy */
+        table,
+        th,
+        td {
+            border: 1px solid rgb(255, 255, 255);
+            border-collapse: collapse;
+        }
+
+        /* table anpassen beginn */
+        .spalte1breite5 {
+            width: 5%;
+            height: 25vh;
+        }
+
+        .spalte2breite10 {
+            width: 10%;
+        }
+
+        .spalte3breite10 {
+            width: 10%;
+        }
+
+        .spalte4breite10 {
+            width: 10%;
+        }
+
+        .zeilenHoehe5 {
+            height: 5vh;
+        }
+
+        .beOrange {
+            color: #FFA500;
+        }
+
+        .centerNames {
+            text-align: center;
+        }
+
+        /* table anpassen ende */
+    </style>
+
+</head>
+
+<body class="fredoka-font">
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" style="color: #FFA500;" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- navbar Ende -->
+
+    <!-- üwaschrift -->
+    <div class="container p-3 my-3">
+        <h1 style="text-align: center;" class="beOrange">Feindliche Kreaturen</h1>
+    </div>
+
+    <!-- table 1 beginn -->
+    <table style="width:100%">
+        <!-- data-toggle="tooltip" title="text" -->
+        <tr class="centerNames">
+            <!-- kreaturen namen beginn-->
+            <td></td>
+            <td>Baby</td>
+            <td>Swarmer</td>
+            <td>Exploder</td>
+            <td>Spitter</td>
+            <td>Grunt</td>
+            <td>Acid Spitter</td>
+        </tr>
+        <!-- kreaturen namen ende-->
+        <!-- bilder beginn -->
+        <tr>
+            <td class="spalte1breite5"></td>
+            <!-- spaltenbreite, gecentert, image+tooltip -->
+            <td class="spalte2breite10" style="text-align: center;"><img src="Assets/DRG Mobs/151px-Glyphid_baby.webp"
+                    alt="glyphid baby" data-toggle="tooltip"
+                    title="Kleine, harmlose Versionen der größeren Glyphids. Sie sind in den Höhlen zu finden und stellen keine Bedrohung dar.">
+            </td>
+            <td class="spalte3breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_swarmer.webp" alt="glyphid swarmer" data-toggle="tooltip"
+                    title="Kleine, aggressive Kreaturen, die in großen Schwärmen angreifen. Sie können schnell überwältigen, wenn sie in großer Zahl auftauchen.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/177px-Glyphid_exploder.webp" alt="glyphid exploder" data-toggle="tooltip"
+                    title="Mittlere Glyphids, die explodieren, wenn sie nahe genug kommen. Die Explosion fügt erheblichen Schaden zu und kann Spieler leicht töten.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_spitter.webp" alt="glyphid spitter" data-toggle="tooltip"
+                    title="Fernkampfangreifer, die ätzende Flüssigkeiten spucken. Sie können aus der Ferne Schaden zufügen und sind oft an schwer erreichbaren Orten positioniert.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img src="Assets/DRG Mobs/180px-Glyphid_grunt.webp"
+                    alt="glyphid exploder"
+                    data-toggle="Die häufigste Art von Glyphid, die im Nahkampf angreift. Sie sind weniger widerstandsfähig und leichter zu töten, erscheinen aber oft in Gruppen."
+                    title="Fernkampfangreifer, die ätzende Flüssigkeiten spucken. Sie können aus der Ferne Schaden zufügen und sind oft an schwer erreichbaren Orten positioniert.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_acid_spitter.webp" alt="glyphid exploder" data-toggle="tooltip"
+                    title="Eine gefährlichere Version des Spitters, die Säure spuckt und erheblichen Schaden über Zeit verursacht. Sie haben eine größere Reichweite und können Spieler schnell schwächen.">
+            </td>
+        </tr>
+        <!-- bilder ende -->
+        <!-- zeilen "überschriften" beginn -->
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Lebenspunkte</td>
+            <td>5</td>
+            <td>12</td>
+            <td>20</td>
+            <td>40</td>
+            <td>90</td>
+            <td>120</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Schwachstelle</td>
+            <td>Keine</td>
+            <td>Keine</td>
+            <td>Kopf</td>
+            <td>Kopf</td>
+            <td>Kopf</td>
+            <td>Kopf</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Höhere Verteidigung</td>
+            <td>Keine</td>
+            <td>Keine</td>
+            <td>Keine</td>
+            <td>Körper, Vorderbeine + 10</td>
+            <td>Körper, Beine + 15</td>
+            <td>Körper, Vorderbeine + 10</td>
+        </tr>
+    </table> <br><br>
+    <!-- zeilen "überschriften" ende -->
+    <!-- table 1 ende -->
+
+    <!-- table 2 beginn -->
+    <table style="width:100%">
+        <!-- data-toggle="tooltip" title="text" -->
+        <tr class="centerNames">
+            <!-- kreaturen namen beginn-->
+            <td></td>
+            <td>Slasher</td>
+            <td>Grunt Guard</td>
+            <td>Septic Spreader</td>
+            <td>Tri-Jaw</td>
+            <td>Stingtail</td>
+            <td>Sentinel</td>
+        </tr>
+        <!-- kreaturen namen ende-->
+        <tr>
+            <td class="spalte1breite5"></td>
+            <td class="spalte2breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/171px-Glyphid_Slasher.webp" alt="glyphid slasher" data-toggle="tooltip"
+                    title="Eine gefährlichere Variante des Glyphid Grunt mit scharfen Klauen, die erheblichen Nahkampfschaden verursachen. Sie sind aggressiver und widerstandsfähiger.">
+            </td>
+            <td class="spalte3breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_Grunt_Guard.webp" alt="glyphid grunt guard" data-toggle="tooltip"
+                    title="Eine gepanzerte Variante des Glyphid Grunt mit erhöhter Verteidigung. Sie sind schwerer zu töten und schützen oft andere Feinde.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/160px-Glyphid_Septic_Spreader.webp" alt="glyphid septic spreader"
+                    data-toggle="tooltip"
+                    title="Diese Kreaturen spucken giftige Flüssigkeit, die Flächen schädigt und über Zeit Schaden verursacht. Sie sind gefährlich, wenn sie nicht schnell eliminiert werden.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Mactera_Tri-Jaw.webp" alt="Tri-Jaw" data-toggle="tooltip"
+                    title="Eine seltene und besonders gefährliche Glyphid-Art mit drei mächtigen Kiefern, die großen Schaden anrichten. Sie sind aggressiv und widerstandsfähig.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_Stingtail.webp" alt="glyphid stingtail" data-toggle="tooltip"
+                    title="Diese Kreaturen haben einen gefährlichen Stachel, der sowohl für Nahkampf- als auch Fernkampfangriffe verwendet werden kann. Sie sind flink und aggressiv.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img src="Assets/DRG Mobs/176px-Sentinel.webp"
+                    alt="glyphid sentinel" data-toggle="tooltip"
+                    title="Eine noch mächtigere und besser gepanzerte Variante des Grunt Guards. Sie bieten hohe Verteidigung und können andere Feinde verstärken.">
+            </td>
+        </tr>
+        <!-- zeilen"überschriften" beginn -->
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Lebenspunkte</td>
+            <td>148</td>
+            <td>270</td>
+            <td>270</td>
+            <td>350</td>
+            <td>400</td>
+            <td>450</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Schwachstelle</td>
+            <td>Kopf</td>
+            <td>Kopf</td>
+            <td>Hinterteil</td>
+            <td>Bauch</td>
+            <td>Mund, Rücken</td>
+            <td>Hinten</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Höhere Verteidigung</td>
+            <td>Körper, Beine + 15</td>
+            <td>Körper + 15 <br>
+                Vorderbeine: Extra Rüstung + 60 LP
+            </td>
+            <td>Rücken, Vorderbeine + 20</td>
+            <td>Keine</td>
+            <td>Rücken, Schwanz, Beine + 15 LP</td>
+            <td>Keine</td>
+        </tr>
+    </table><br><br>
+    <!-- zeilen "überschriften" ende -->
+    <!-- table 2 ende -->
+
+    <!-- überschrift 3. tabelle -->
+    <div class="container p-3 my-3">
+        <h1 style="text-align: center;" class="beOrange">Neutrale Kreaturen</h1>
+    </div><br>
+
+    <!-- table 3 beginn -->
+    <table style="width:100%">
+        <!-- data-toggle="tooltip" title="text" -->
+        <tr class="centerNames">
+            <!-- kreaturen namen beginn-->
+            <td></td>
+            <td>Maggot</td>
+            <td>Cave Cruiser</td>
+            <td>Fester Flea</td>
+            <td>Hexawing Gniffler</td>
+            <td>Cave Angel</td>
+            <td>Silicate Harvester</td>
+        </tr>
+        <!-- kreaturen namen ende-->
+        <tr>
+            <td class="spalte1breite5"></td>
+            <td class="spalte2breite10" style="text-align: center;"><img src="Assets/DRG Mobs/180px-Maggot.webp"
+                    alt="maggot" data-toggle="tooltip"
+                    title="Kleine, wurmartige Kreaturen, die häufig in den Höhlen anzutreffen sind. Sie sind harmlos und tragen nichts von Wert.">
+            </td>
+            <td class="spalte3breite10" style="text-align: center;"><img src="Assets/DRG Mobs/180px-Jelly.webp"
+                    alt="Cave Cruiser" data-toggle="tooltip"
+                    title="Leuchtende, quallenartige Kreaturen, die in den Höhlen schweben. Sie sind harmlos und bieten eine interessante visuelle Kulisse.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img src="Assets/DRG Mobs/180px-Fleas.webp"
+                    alt="fester flea" data-toggle="tooltip"
+                    title="Kleine, fliegende Insekten, die oft Teil von sekundären Missionszielen sind. Sie sind relativ schnell und schwer zu fangen.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/176px-Hexawing_Gniffer.webp" alt="glyphid hexawing gniffer"
+                    data-toggle="tooltip"
+                    title="Eine fliegende Kreatur mit sechs Flügeln, die durch die Höhlen von Hoxxes IV schwebt. Der Hexawing Gniffler ist harmlos und fügt keinen Schaden zu.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/176px-Mobula_Cave_Angel.webp" alt="cave angel" data-toggle="tooltip"
+                    title="Große, majestätische Kreaturen, die sanft durch die Luft gleiten. Sie sind passiv und greifen nicht an.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Silicate_harvester.webp" alt="silicate Harvester" data-toggle="tooltip"
+                    title="Robuste, spinnenartige Kreaturen, die Mineralien sammeln. Sie sind harmlos und fliehen, wenn sie bedroht werden.">
+            </td>
+        </tr>
+        <!-- zeilen"überschriften" beginn -->
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5" style="text-align: center;">Lebenspunkte</td>
+            <td>1</td>
+            <td>35</td>
+            <td>80</td>
+            <td>80</td>
+            <td>100</td>
+            <td>250</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5" colspan="7"> Keine Schwachstellen</td>
+
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5" colspan="7">Keine Höhere Verteidigung</td>
+        </tr>
+    </table><br><br>
+    <!-- zeilen "überschriften" ende -->
+    <!-- table 3 ende -->
+
+    <!-- überschrift 4. tabelle -->
+    <div class="container p-3 my-3">
+        <h1 style="text-align: center;" class="beOrange">Bosse</h1>
+    </div><br>
+    <!-- table bosse beginn -->
+
+    <table style="width:100%">
+        <!-- data-toggle="tooltip" title="text" -->
+        <tr class="centerNames">
+            <!-- kreaturen namen beginn-->
+            <td></td>
+            <td>Bulk Detonator</td>
+            <td>Lacerator</td>
+            <td>Arbalest</td>
+            <td>Dreadnought</td>
+            <td>Hiveguard</td>
+            <td>Caretaker</td>
+        </tr>
+        <!-- kreaturen namen ende-->
+        <tr>
+            <td class="spalte1breite5"></td>
+            <td class="spalte2breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/147px-Glyphid_Bulk_Detonator.webp" alt="glyphid baby" data-toggle="tooltip"
+                    title="Ein gigantischer, explosiver Glyphid mit einer extrem dicken Panzerung. Der Bulk Detonator ist eine wandelnde Bombe, die bei Tod eine massive Explosion verursacht, die enormen Schaden anrichtet und große Bereiche der Umgebung zerstört.">
+            </td>
+            <td class="spalte3breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/177px-Dreadnought_Lacerator.webp" alt="glyphid swarmer" data-toggle="tooltip"
+                    title="Zwei Dreadnoughts, die zusammenarbeiten. Der Arbalest ist agiler und hat Fernkampfangriffe, während der Lacerator auf Nahkampf spezialisiert ist.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/177px-Dreadnought_Arbalest.webp" alt="glyphid exploder" data-toggle="tooltip"
+                    title="Zwei Dreadnoughts, die zusammenarbeiten. Der Arbalest ist agiler und hat Fernkampfangriffe, während der Lacerator auf Nahkampf spezialisiert ist.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Glyphid_Dreadnought.webp" alt="glyphid exploder" data-toggle="tooltip"
+                    title="Ein massiver, gepanzerter Glyphid, der extrem stark und widerstandsfähig ist. Der Dreadnought hat zwei Phasen: in der ersten ist er langsamer und in der zweiten wird er schneller und aggressiver.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img
+                    src="Assets/DRG Mobs/180px-Dreadnought_Hiveguard.webp" alt="glyphid exploder" data-toggle="tooltip"
+                    title="Ein noch gefährlicherer Dreadnought mit zusätzlichen Panzerungen und Schutzmechanismen. Er beschwört Wächter, die ihn verteidigen.">
+            </td>
+            <td class="spalte4breite10" style="text-align: center;"><img src="Assets/DRG Mobs/180px-Caretaker.webp"
+                    alt="glyphid exploder" data-toggle="tooltip"
+                    title="Ein riesiger Roboter, der von der Rival Corporation gesteuert wird. Er hat mehrere Angriffsphasen und beschwört kleinere Drohnen zu seiner Verteidigung.">
+            </td>
+        </tr>
+        <!-- zeilen"überschriften" beginn -->
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Lebenspunkte</td>
+            <td>4000</td>
+            <td>4500</td>
+            <td>4500</td>
+            <td>5000</td>
+            <td>5000</td>
+            <td>Auge 5500 <br>
+                + 550 LP pro Schacht (4Schächte)
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Schwachstelle</td>
+            <td>Leuchtende Knollen (200LP)</td>
+            <td>Rücken (unter dem Panzer)</td>
+            <td>Rücken (unter dem Panzer)</td>
+            <td>Rücken (unter dem Panzer)</td>
+            <td>Rücken (wenn enthüllt)</td>
+            <td>Auge</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td class="zeilenHoehe5">Höhere Verteidigung</td>
+            <td>Keine</td>
+            <td>Immun, Panzer am Rücken wegballern</td>
+            <td>Immun, Panzer am Rücken wegballern</td>
+            <td>Immun, Panzer am Rücken wegballern</td>
+            <td>Körper, Beine + 15</td>
+            <td>Immun, Schächte eliminieren um Auge zu öffnen</td>
+        </tr>
+    </table>
+    <!-- zeilen"überschriften" ende-->
+    <!-- table bosse ende -->
+
+</body>
+
+</html>

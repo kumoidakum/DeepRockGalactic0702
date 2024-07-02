@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Willkommen Beginn */
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url(DRG_Wallpaper_GlacialStrata.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* ka ahnung warum - is aber so: 1px solid white geht net. muss getrennt angeben */
+        .endgame {
+            position: absolute;
+            border: 1px solid;
+            border-color: #FFA500;
+            top: 10vh;
+            left: 70vh;
+            font-size: 1.2rem;
+            width: 80vh;
+            text-align: center;
+        }
+
+        /* table - w3 copy - beginn */
+        .tableStyle {
+            position: absolute;
+            top: 190vh;
+            left: 61.2vh;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #FFA500;
+            border-collapse: collapse;
+        }
+
+        .ersteSpaltePics {
+            text-align: center;
+            /* vertical-align: middle;  - GEHT NET */
+            width: 100%;
+        }
+
+        /* table - w3 copy - ende */
+
+        .deepDivePic {
+            position: absolute;
+            border: 1px solid;
+            border-color: #FFA500;
+            top: 65vh;
+            left: 6.7vh;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            z-index: 9999;
+        }
+
+        .eDdPic {
+            position: absolute;
+            border: 1px solid;
+            border-color: #FFA500;
+            top: 125vh;
+            right: 5vh;
+            z-index: 9998;
+        }
+
+        .linieSenkrecht {
+            position: absolute;
+            top: 48.8vh;
+            left: 110vh;
+            border: 1px solid #FFA500;
+            height: 194vh;
+        }
+
+        .deepDiveText {
+            position: absolute;
+            border: 1px solid;
+            border-color: #FFA500;
+            top: 77.5vh;
+            left: 110vh;
+            color: rgb(248, 248, 248);
+            font-size: 1.2rem;
+            width: 80vh;
+            text-align: center;
+        }
+
+        .eliteDeepDiveText {
+            position: absolute;
+            border: 1px solid;
+            border-color: #FFA500;
+            top: 135vh;
+            left: 30.1vh;
+            color: rgb(248, 248, 248);
+            font-size: 1.2rem;
+            width: 80vh;
+            text-align: center;
+        }
+
+        .newColor {
+            color: #FFA500;
+        }
+    </style>
+
+    <!-- w3 copy, size angepasst  -->
+    <script>
+        function bigImg(x) {
+            x.style.height = "auto";
+            x.style.width = "900px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "auto";
+            x.style.width = "600px";
+        }
+    </script>
+
+</head>
+
+<body class="fredoka-font">
+
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" style="color: #FFA500;" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- navbar Ende -->
+
+    <!-- top div beginn -->
+    <div class="container p-3 my-3 bg-dark text-white endgame">
+        <h3 style="color: #FFA500;">Endgame</h3>
+        <!-- mit br formen -->
+        <p>Deep Dives sind eine Endgame-Mechanik in Deep Rock Galactic, verfügbar <br> nach der
+            ersten Beförderung eines Zwerges. Es gibt zwei Varianten: <br> Deep Dives und Elite Deep Dives. Jede umfasst
+            drei Missionen <br> mit sechs Primärzielen.
+            Ausrüstung, Munition, HP sowie <br> Gold und Nitra werden von einer Mission zur <br> nächsten übertragen.
+            Deep Dives
+            werden <br> am Deep Dive Terminal auf der <br> Space Rig gestartet.</p>
+    </div>
+    <!-- top div ende -->
+
+    <!-- deep dive bilder beginn-->
+    <div>
+        <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" class="deepDivePic"
+            src="Assets/DRG Pics/What-Are-Deep-Dives-in-Deep-Rock-Galactic-2606751670.jpg" alt="dd" width="600"
+            height="auto">
+    </div>
+    <div>
+        <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" class="eDdPic"
+            src="Assets/DRG Pics/800px-Deep_dive_mission.jpg" alt="EDD" width="600" height="auto">
+    </div>
+    <!-- deep dive bilder ende -->
+
+    <!-- linie nur mit border - 1er-schmäh -->
+    <div class="linieSenkrecht"> </div>
+    <!-- linie nur mit border - 1er-schmäh -->
+
+    <!-- text DD/EDD beginn -->
+    <div class="deepDiveText bg-dark">
+        <h4 style="color: #FFA500;">Deep Dives</h4>
+        <p>Deep Dives sind spezielle wöchentliche Missionstypen. Sie bestehen aus drei aufeinanderfolgenden Phasen,
+            einschließlich zwei regulärer <br> Höhlenmissionen und einer abschließenden "Black Box" <br> Mission. Jede
+            Phase wird mit zunehmender <br> Schwierigkeit generiert und bietet <br> Herausforderungen, die <br>
+            Teamarbeit <br> braucht.</p>
+    </div>
+
+    <div class="eliteDeepDiveText bg-dark">
+        <h4 style="color: #FFA500;">Elite Deep Dives</h4>
+        <p>Elite Deep Dives sind eine anspruchsvollere Variante von Deep Dives, die erfahrene Spieler herausfordern. Sie
+            beinhalten ebenfalls drei Phasen <br> mit höheren Schwierigkeiten und komplexeren Gegnern sowie <br>
+            Hindernissen. Die erfolgreiche Absolvierung von Deep Dives <br> und Elite Deep Dives belohnt die Spieler mit
+            einzigartigen <br> Kosmetika, Erzprämien und anderen speziellen <br> Belohnungen,
+            wobei Elite Deep Dives <br> zusätzlich wertvollere und exklusive <br> Gegenstände bieten.</p>
+    </div>
+    <!-- text DD/EDD ende -->
+    <br>
+
+    <!-- table eingedivt für movement -->
+    <div class="tableStyle bg-dark">
+        <!-- w3 copy, klassische tabelle beginn -->
+        <table style="width:100%">
+            <tr>
+                <th style="width: 5%;"></th>
+                <th style="width: 20vw; text-align: center;" class="newColor">Primäre Missionen</th>
+                <th style="width: 20vw; text-align: center;" class="newColor">Sekundäre Missionen</th>
+            </tr>
+            <tr>
+                <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Mining_expedition_icon.webp"
+                        alt="Bergbauexpedition"></td>
+                <td>Bergbauexpedition</td>
+                <td>Bergungsoperation</td>
+            </tr>
+            <tr>
+                <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Egg_collection_icon.webp" alt="Eier Jagd">
+                </td>
+                <td>Eier Jagd 4/6</td>
+                <td>Eier Jagd 2/6</td>
+            </tr>
+            <tr>
+                <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Refining_icon.webp" alt="Refining"></td>
+                <td>Vor-Ort-Raffinierung</td>
+                <td>Punktextraktion</td>
+            </tr>
+            <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Industrial_Sabotage_icon.webp"
+                    alt="industrial sabotage"></td>
+            <td>Industrielle Sabotage</td>
+            <td>Bergungsoperation</td>
+            </tr>
+            <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Point_extraction_icon.webp"
+                    alt="Bergbauexpedition"></td>
+            <td>Punktextraktion</td>
+            <td>Bergbauexpedition</td>
+            </tr>
+            <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Escort_icon.webp" alt="Escort Duty"></td>
+            <td>Beigleitauftrag</td>
+            <td>Bergbauexpedition</td>
+            </tr>
+            <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Elimination_icon.webp" alt="Elimination"></td>
+            <td>Eliminierung 2/3</td>
+            <td>Eliminierung 1/3</td>
+            </tr>
+            <td><img class="ersteSpaltePics" src="Assets/DRG Pics/30px-Blackbox_icon.webp" alt="Bergbauexpedition"></td>
+            <td>Punktextraktion</td>
+            <td>Bergungsoperation</td>
+        </table>
+        <!-- w3 copy, klassische tabelle ende -->
+    </div>
+</body>
+
+</html>

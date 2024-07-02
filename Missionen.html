@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* gradient maker = mit biome 1 pic */
+            background: linear-gradient(215deg, #0D1B2A, #283845, #4CAF50, #8E763F);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* schriftgrösse */
+        .size {
+            font-size: 1.5rem;
+        }
+
+        /* 2 logos, links-rechts beginn */
+        .repositionLinks {
+            position: fixed;
+            scale: 90%;
+            top: 30vh;
+            left: 0vh;
+        }
+
+        .repositionRechts {
+            position: fixed;
+            scale: 90%;
+            top: 30vh;
+            right: 0vh;
+        }
+
+        /* 2 logos, links-rechts ende */
+    </style>
+</head>
+
+<body class="fredoka-font">
+
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" style="color: #FFA500;" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- navbar Ende -->
+
+    <!-- die 2 together we forge tomorrow pics beginn  -->
+    <div class="repositionLinks">
+        <img src="Assets/DRG Pics/Picture4_400P.png" alt="drg logo_future">
+    </div>
+
+    <div class="repositionRechts">
+        <img src="Assets/DRG Pics/Picture4_400P.png" alt="drg logo_future">
+    </div>
+    <!-- die 2 - together we forge tomorrow pics beginn  -->
+
+    <!-- <img src="">  reinkopiern, wird net vorgeschlagen - geht trotzdem-->
+    <!-- table umspannender div beginn -->
+    <div class="container text-white">
+        <h2 style="color: #FFA500;">Missions Typen und wie man sie freischaltet</h2> <br>
+        <!-- table beginn -->
+        <table class="table size">
+            <thead class="thead-dark">
+                <tr class="t">
+                    <!-- üwaschriften nan -->
+                    <th style="color: #FFA500;">Mission #</th>
+                    <th style="color: #FFA500;">Missions Typ</th>
+                    <th style="color: #FFA500;">Belohnungen</th>
+                </tr>
+            </thead>
+            <tbody class="text-white">
+                <!-- 1. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>1</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Mining_expedition_icon.webp"
+                            alt="Mining Expedition">Begbauexpedition</td>
+                    <!-- 3. spalte, REWARDS, 1.zeile: text+bild+text -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Egg_collection_icon.webp"
+                            alt="30px egg">Eier Jagd<br>
+                        <!-- 3. spalte, REWARDS, 2. zeile: bild+text, bild+text  -->
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">2000 Credits <img
+                            src="Assets/DRG Pics/20px-Bismor_icon.webp" alt="20px-Bismor_icon">50 Bismor
+                    </td>
+                </tr>
+                <!-- 1. zeile ende -->
+
+                <!-- 2. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>2</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Egg_collection_icon.webp" alt="30px egg">Eier Jagd</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text+bild+text, bild+text  -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Refining_icon.webp"
+                            alt="30px-Refining_icon">
+                        Vor-Ort-Raffinierung <br>
+                        <!-- 3. spalte, REWARDS, 2. zeile: bild+text, bild+text  -->
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">2000 Credits
+                        <img src="Assets/DRG Pics/20px-Enor_pearl_icon.webp" alt="20px-Enor_Pearl_icon">50 Enor Perlen
+                    </td>
+                </tr>
+                <!-- 2. zeile ende -->
+
+                <!-- 3. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>3</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Refining_icon.webp" alt="Refining">Vor-Ort-Raffinierung</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text + jede zeile bild+text -->
+                    <td>Neue Region<br>
+                        <img src="Assets/DRG Pics/28px-Fungus_bogs_icon.webp" alt="fungus bogs">Pilzsümpfe<br>
+                        <img src="Assets/DRG Pics/28px-Radioactive_exclusion_zone_icon.webp"
+                            alt="radioactive">Radioaktive Ausschlusszone<br>
+                        <img src="Assets/DRG Pics/20px-Bismor_icon.webp" alt="20px-Bismor_icon">50 Bismor
+                    </td>
+                </tr>
+                <!-- 3. zeile ende -->
+
+                <!-- 4. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>4</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Mining_expedition_icon.webp"
+                            alt="Mining Expedition">Bergbauexpedition</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text+bild+text -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Salvage_icon.webp"
+                            alt="Bergungsoperation">Bergungsoperation</td>
+                </tr>
+                <!-- 4. zeile ende -->
+
+                <!-- 5. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>5</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Salvage_icon.webp" alt="Bergungsoperation">Bergungsoperation</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text + jede zeile bild+text -->
+                    <td>Neue Region<br>
+                        <img src="Assets/DRG Pics/28px-Dense_biozone_icon.webp" alt="Dense Biozone">Dichte Biozone<br>
+                        <img src="Assets/DRG Pics/28px-Glacial_strata_icon.webp" alt="Glacial Strata">Gletscherschichten
+                        <br>
+                        <!-- 3. spalte, 5. zeile, REWARDS: text + bild+text, bild+text  -->
+                        <img src="Assets/DRG Pics/28px-Hollow_bough_icon.webp" alt="hollow Boukomplexitätgh">Hohler
+                        Ast<br>
+                        Neue Eier Jagd<br>
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">3500 Credits <img
+                            src="Assets/DRG Pics/20px-Enor_pearl_icon.webp" alt="20px-Enor_Pearl_icon">120 Enor
+                        Perlen
+                    </td>
+                </tr>
+                <!-- 5. zeile ende -->
+
+                <!-- 6. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>6</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Egg_collection_icon.webp" alt="30px egg">Eier Jagd</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text+bild+text -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Point_extraction_icon.webp"
+                            alt="Point Extraction">Punktextraktion<br>
+                        <!-- 3. spalte, 2. zeile, REWARDS: text -->
+                        Neue Vor-Ort-Raffinierung Komplexität<br>
+                        <!-- 3. spalte, 3. zeile, REWARDS: bild+text, bild+text  -->
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">4000 Credits <img
+                            src="Assets/DRG Pics/20px-Jadiz_icon.webp" alt="jaditz">80 Jaditz
+                    </td>
+                </tr>
+                <!-- 6. zeile ende -->
+
+                <!-- 7. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>7</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Point_extraction_icon.webp"
+                            alt="Point Extraction">Punktextraktion</td>
+                    <!-- text + 3 zeilen bild+text -->
+                    <td>Neue Region<br>
+                        <img src="Assets/DRG Pics/28px-Azure_weald_icon.webp" alt="Azure Weald">Azur Wald<br>
+                        <img src="Assets/DRG Pics/28px-Magma_core_icon.webp" alt="Magma Core">Magma Kern<br>
+                        <img src="Assets/DRG Pics/28px-Sandblasted_corridors_icon.webp"
+                            alt="sandgestrahlte Korridore">Sandgestrahlte Korridore<br>
+                        <!-- 3. spalte, 5. zeile, REWARDS: text + text + bild+text, bild+text  -->
+                        Neue Bergungsmission Komplexität<br>
+                        Neue Punktextraktion Missionslänge<br>
+                        <p><img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">4000 Credits <img
+                                src="Assets/DRG Pics/20px-Croppa_icon.webp" alt="croppa">120 Croppa</p>
+                    </td>
+                </tr>
+                <!-- 7. zeile ende -->
+
+                <!-- 8. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>8</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Refining_icon.webp" alt="refining">Vor-Ort-Raffinierung</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text+bild+text -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Escort_icon.webp"
+                            alt="escort">Begleitauftrag
+                        <br>
+                        <!-- 3. spalte, 2. zeile, REWARDS: bild+text, bild+text -->
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">5000 Credits <img
+                            src="Assets/DRG Pics/20px-Bismor_icon.webp" alt="bismor">140 Bismor
+                    </td>
+                </tr>
+                <!-- 8. zeile ende -->
+
+                <!-- 9. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>9</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Escort_icon.webp" alt="Begleitauftrag">Begleitauftrag</td>
+                    <!-- 3. spalte, 1. zeile, REWARDS:  text+bild+text -->
+                    <td>Neuer Missions Typ - <img src="Assets/DRG Pics/30px-Elimination_icon.webp"
+                            alt="Vernichtung">Vernichtung
+                        <!-- 3. spalte, 2. zeile, REWARDS: bild+text -->
+                        <p><img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">5000 Credits<img </p>
+                    </td>
+                </tr>
+                <!-- 9. zeile ende -->
+
+                <!-- 10. zeile beginn -->
+                <tr>
+                    <!-- 1. spalte, NUMMERIERUNG -->
+                    <td>10</td>
+                    <!-- 2. spalte, MISSION TYPE: bild+text-->
+                    <td><img src="Assets/DRG Pics/30px-Elimination_icon.webp" alt="elimination">Vernichtung</td>
+                    <!-- 3. spalte, 1. - 5. zeile, REWARDS:  text-->
+                    <td>Auftrag Abgschlossen<br>
+                        Neue Bergbauexpedition Komplexität<br>
+                        Neue Eier Jagd Komplexität<br>
+                        Neue Eliminierung Komplexität<br>
+                        Neue Bergungsoperation Komplexität<br>
+                        <!-- 3. spalte, 6. zeile, REWARDS: 4x bild+text -->
+                        <img src="Assets/DRG Pics/20px-Credit.webp" alt="creds">6000 Credits
+                        <img src="Assets/DRG Pics/20px-Magnite_icon.webp" alt="magnite">180 Magnite
+                        <img src="Assets/DRG Pics/20px-Jadiz_icon.webp" alt="jaditz">80 Jaditz
+                        <img src="Assets/DRG Pics/20px-Croppa_icon.webp" alt="croppa">60 Croppa
+                    </td>
+                </tr>
+                <!-- 10. zeile ende -->
+            </tbody>
+        </table>
+    </div>
+    <!-- table umspannender div ende -->
+</body>
+
+</html>

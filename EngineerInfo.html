@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url(DRG_WallpaperChars_BEORWEIT.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* linker div/charaktere beginn*/
+        .charaktere {
+            position: absolute;
+            max-width: 17%;
+            height: 80%;
+            top: 18vh;
+            opacity: 0.9;
+            text-align: center;
+            align-items: row;
+        }
+
+        .scout {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 25%;
+            left: 12vh;
+            top: 8vh;
+        }
+
+        .gunner {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 35%;
+            left: 10vh;
+            top: 26vh;
+        }
+
+        .engi {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 30%;
+            left: 10vh;
+            top: 43vh;
+        }
+
+        .driller {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 40%;
+            left: 10vh;
+            top: 62vh;
+        }
+
+        /* linker div/charaktere ende */
+
+        /* rechter div/granaten beginn */
+        .rechtsGranaten {
+            position: absolute;
+            max-width: 17%;
+            height: 80%;
+            top: 18vh;
+            right: 0vh;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        /* rechter div/granaten ende */
+
+        /*container waffen und co beginn */
+        .infoWaffenContainer {
+            position: absolute;
+            text-align: center;
+            width: 60%;
+            height: 92%;
+            top: 8vh;
+            left: 44vh;
+            opacity: 0.9;
+        }
+
+        .paddingBottom {
+            padding-bottom: 20px;
+        }
+
+        /* container waffen und co ende */
+
+        /* container granaten ende */
+        .granatenMargin {
+            margin-top: 60px;
+        }
+
+        /* i wir sunst deppat, jeder style extra - W3 TOOLTIPS - BEGINN*/
+        /* charaktere BEGINN */
+        /* scout */
+        .tooltipScout {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .scout:hover .tooltipScout {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* scout */
+
+        /* gunner */
+        .tooltipGunner {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gunner:hover .tooltipGunner {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* gunner */
+
+        /* engineer */
+        .tooltipEngineer {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .engi:hover .tooltipEngineer {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* engineer */
+
+        /* driller */
+        .tooltipDriller {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .driller:hover .tooltipDriller {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* driller */
+        /* charaktere ENDE */
+
+        /* HauptWaffen beginn */
+        /* shotgun */
+        .tooltipShotgun {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .shotgun:hover+.tooltipShotgun {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* shotgun */
+
+        /* voltaik */
+        .tooltipVoltaik {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .voltaik:hover+.tooltipVoltaik {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* voltaik */
+
+        /* lok-1 */
+        .tooltipLok1 {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lok1:hover+.tooltipLok1 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* lok-1 */
+        /* hauptwaffen ende */
+
+        /* nebenwaffen beginn */
+        /* grenade launcher */
+        .tooltipGrenadeLauncher {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .grenadeLauncher:hover+.tooltipGrenadeLauncher {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* grenade launcher */
+
+        /* breach cutter */
+        .tooltipBreachCutter {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .breachCutter:hover+.tooltipBreachCutter {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* breach cutter */
+
+        /* shard diffractor */
+        .tooltipShard {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .shard:hover+.tooltipShard {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* shard diffractor */
+        /* nebenwaffen ende */
+
+        /* ausrüstung beginn */
+        /* platform gun */
+        .tooltipPlatform {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .platformGun:hover+.tooltipPlatform {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* platform gun */
+
+        /* sentry */
+        .tooltipSentry {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .sentry:hover+.tooltipSentry {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* sentry */
+
+        /* armor */
+        .tooltipArmor {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .armorEngi:hover+.tooltipArmor {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* armor */
+        /* ausrüstung ende */
+
+        /* granaten BEGINN */
+        /* lure */
+        .tooltipLure {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lure:hover+.tooltipLure {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* lure */
+
+        /* plasma */
+        .tooltipPlasma {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .plasma:hover+.tooltipPlasma {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* plasma */
+
+        /* proximity */
+        .tooltipProximity {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .proximity:hover+.tooltipProximity {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* proximity */
+
+        /* shredder */
+        .tooltipShredder {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .shredder:hover+.tooltipShredder {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* granaten ENDE */
+        /* i wir sunst deppat, jeder style extra - W3 TOOLTIPS ENDE*/
+        /* tooltips ende */
+
+
+        /* klassennamen neben charakterpics beginn */
+        .scoutText {
+            color: white;
+            position: absolute;
+            left: 8vh;
+            top: 30vh;
+            font-size: 0.9rem;
+        }
+
+        .gunnerText {
+            color: white;
+            position: absolute;
+            left: 25vh;
+            top: 45vh;
+            font-size: 0.9rem;
+        }
+
+        .engineerText {
+            color: white;
+            position: absolute;
+            left: 8vh;
+            top: 61vh;
+            font-size: 0.9rem;
+        }
+
+        .drillerText {
+            color: white;
+            position: absolute;
+            left: 25vh;
+            top: 80vh;
+            font-size: 0.9rem;
+        }
+
+        /* klassennamen neben charakterpics ende */
+    </style>
+</head>
+
+<body class="fredoka-font">
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" href="#" id="navbardrop"
+                    data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- w3 kopiert, navbar Ende -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp -->
+    <!-- charakter div mit 4 klickbaren klassen beginn -->
+    <!-- my-3 = margin y - vertikaler abstand  -->
+    <div id="Charaktere.html" class="container p-3 my-3 bg-dark text-white charaktere">
+        <h3 style="color: #FFA500;">Charaktere</h3>
+        <div class="scout">
+            <!-- charaktere ist auch scout (startseite) -->
+            <a href="Charaktere.html">
+                <img src="Assets/DRG Pics/drgScout.png" alt="Scout Pic" class="img-fluid">
+                <div class="tooltipScout">Mit einem Greifhaken und Leuchtpistole azsgestattet, um die Umgebung zu
+                    erkunden und zu beleuchten.</div>
+            </a>
+        </div>
+        <div class="gunner">
+            <a href="GunnerInfo.html">
+                <img src="Assets/DRG Pics/drgGunner.png" alt="Gunner Pic" class="img-fluid">
+                <div class="tooltipGunner">Hauptsächlich für die Bekämpfung von Feinden zuständig. Nutzt schwere Waffen
+                    wie Miniguns und Schilde.</div>
+            </a>
+        </div>
+        <div class="engi">
+            <a href="EngineerInfo.html">
+                <img src="Assets/DRG Pics/drgEngi.png" alt="Engineer Pic" class="img-fluid">
+                <div class="tooltipEngineer">Baut Türme und Plattformen. Verwendet Geschütztürme und Plattformwerfer zur
+                    Verteidigung und Unterstützung.</div>
+            </a>
+        </div>
+        <div class="driller">
+            <a href="DrillerInfo.html">
+                <img src="Assets/DRG Pics/drgDriller.png" alt="Scout Pic" class="img-fluid">
+                <div class="tooltipDriller">Ausgestattet mit starken Bohrern, der Spezialist für das schnelle Graben
+                    durch das Terrain.</div>
+            </a>
+        </div>
+    </div>
+    <!-- charakter div mit 4 klickbaren klassen ende -->
+
+    <!-- engineer info/hauptwaffen beginn -->
+    <!-- mb-3 für margin bottom 3, mt-5 für margin top 5  -->
+    <div class="infoWaffenContainer bg-dark text-white">
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Engineer Hauptwaffen</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Shotgun.webp" alt="shotgun" class="img-fluid shotgun">
+                <div class="tooltipShotgun">Schrotflinte für Nahkampf mit hoher Durchschlagskraft.</div>
+                <p>Warthog Auto210</p>
+            </div>
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Voltaic_smg.png" alt="voltaik"
+                    class="img-fluid voltaik">
+                <div class="tooltipVoltaik">Maschinenpistole mit elektrischem Schaden.</div>
+                <p>Stümmelchen Voltaik SMG</p>
+            </div>
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Lok-1.png" alt="lok1" class="img-fluid lok1">
+                <div class="tooltipLok1">Intelligentes Gewehr mit Zielerfassungsfunktionen.</div>
+                <p>LOK-1 Techgewehr</p>
+            </div>
+        </div>
+        <!-- engineer hauptwaffen ende -->
+
+        <!-- engineer nebenwaffen beginn -->
+        <div class="row mt-5 mb-3">
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Engineer Nebenwaffen</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Grenade-launcher.png" alt="grenade launcher"
+                    class="img-fluid grenadeLauncher">
+                <div class="tooltipGrenadeLauncher">Granatwerfer für Flächenschaden.</div>
+                <p>Deepcore 40MM PGL</p>
+            </div>
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Breach_cutter.png" alt="breach cutter"
+                    class="img-fluid breachCutter">
+                <div class="tooltipBreachCutter">Schneidewerkzeug, das horizontale Energielinien abfeuert.</div>
+                <p>Breach Cutter</p>
+            </div>
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Shard.png" alt="shard" class="img-fluid shard">
+                <div class="tooltipShard">Hochenergetischer Laser für gezielten Schaden.</div>
+                <p>Splitterrefraktor</p>
+            </div>
+        </div>
+        <!-- engineer nebenwaffen ende -->
+
+        <!-- engineer ausrüstung beginn -->
+        <div class="row mt-5 mb-3">
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Engineer Ausrüstung</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Platform-gun.png" alt="platform Gun"
+                    class="img-fluid platformGun">
+                <div class="tooltipPlatform">Schießt Plattformen, die an Wänden haften und Wege schaffen.</div>
+                <p>Plattformkanone</p>
+            </div>
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer200px-Sentry.png" alt="sentry" class="img-fluid sentry">
+                <div class="tooltipSentry">Automatische Geschütztürme, die Feinde bekämpfen.</div>
+                <p>LMG-Geschützturm</p>
+            </div>
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Engineer/engineer100px-Armor.webp" alt="armor" class="img-fluid armorEngi">
+                <div class="tooltipArmor">Verbesserte Rüstung für zusätzlichen Schutz und erweiterte Funktionalität.
+                </div>
+                <p>Rüstung "Eule"</p>
+            </div>
+        </div>
+    </div>
+    <!-- engineer ausrüstung ende -->
+
+    <!-- rechter div, granaten beginn -->
+    <!-- muss position relative angeben um obere posi (absolute) zu überschreiben für tooltip über pics -->
+    <div class="container p-3 my-3 bg-dark text-white rechtsGranaten">
+        <h3 style="color: #FFA500;">Engineer Granaten</h3>
+        <div>
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Engineer/engineer150px-Grenade_lure.png" alt="lure" class="img-fluid lure">
+                <div class="tooltipLure">Holografisches Ködergerät, das Feinde ablenkt.</div>
+                <p>L.U.R.E.</p>
+            </div>
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Engineer/engineer150px-Grenade_plasma.png" alt="plasma"
+                    class="img-fluid plasma">
+                <div class="tooltipPlasma">Wirft mehrere kleine Plasmaladungen, die explodieren.</div>
+                <p>Plasmastreuer</p>
+            </div>
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Engineer/engineer150px-Grenade_proximity.png" alt="proximity"
+                    class="img-fluid proximity">
+                <div class="tooltipProximity">Setzt eine Mine, die bei Annäherung explodiert.</div>
+                <p>Annäherungsmine</p>
+            </div>
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Engineer/engineer150px-Grenade_shredder.webp" alt="shredder"
+                    class="img-fluid shredder">
+                <div class="tooltipShredder">Drohnen, die automatisch nahe Feinde angreifen und Schaden verursachen.
+                </div>
+                <p>S.S.G.</p>
+            </div>
+        </div>
+    </div>
+    <!-- rechter div/granaten ende -->
+    <!-- engineer info/hauptwaffen ende -->
+
+    <!-- klassennamen -->
+    <div class="scoutText">S<br>C<br>O<br>U<br>T</div>
+    <div class="gunnerText">G<br>U<br>N<br>N<br>E<br>R</div>
+    <div class="engineerText">E<br>N<br>G<br>I<br>N<br>E<br>E<br>R</div>
+    <div class="drillerText">D<br>R<br>I<br>L<br>L<br>E<br>R</div>
+</body>
+
+</html>

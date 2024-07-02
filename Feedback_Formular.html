@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url(DRG_Wallpaper_CrystalCaves.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* formular positionieren */
+        .formPosi {
+            position: absolute;
+            top: 10vh;
+            left: 50vh;
+            color: aliceblue;
+            font-size: 1.3rem;
+        }
+
+        /* knopfal positionieren */
+        .moveSend {
+            position: relative;
+            top: 0vh;
+            left: 25vh;
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+        }
+
+        .beOrange {
+            color: #FFA500;
+        }
+    </style>
+</head>
+
+<body class="fredoka-font">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" href="#" id="navbardrop"
+                    data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- von übungen beinhart rüberkopiert, angepasst-->
+    <div class="formPosi">
+
+        <!-- formuar beginn -->
+        <!-- autocomplete für inhalte merken -->
+        <form id="meinFormular" autocomplete="on">
+            <fieldset>
+                <legend>
+                    <h1 style="color: #FFA500;">Feedback Formular</h1>
+                </legend>
+                <!-- table/kontakt beginn -->
+                <table>
+                    <!-- name beginn -->
+                    <tr>
+                        <td class="beOrange">Vorname</td>
+                        <td>
+                            <input type="text" id="Vorname" name="Vorname" required>
+                        </td>
+                        <td class="beOrange">Nachname</td>
+                        <td>
+                            <input type="text" id="Nachname" name="Nachname" required>
+                        </td>
+                    </tr>
+                    <!-- name ende -->
+                    <!-- adresse, geschlecht & co beginn -->
+                    <tr>
+                        <td class="beOrange">Strasse</td>
+                        <td><input type="text" name="strasse" required></td>
+                        <td class="beOrange">Stadt</td>
+                        <td><input type="text" name="Stadt" required></td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Bundesland</td>
+                        <td><input type="text" name="bundesland" required></td>
+                        <td class="beOrange">PLZ</td>
+                        <td><input type="text" name="PLZ" required></td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Geschlecht</td>
+                        <td>
+                            <input type="radio" name="Geschlecht" id="Mann">
+                            <label for="Mann">Mann</label>
+                            <input type="radio" name="Geschlecht" id="Frau">
+                            <label for="Frau">Frau</label>
+                            <input type="radio" name="Geschlecht" id="Inter">
+                            <label for="Inter">Inter</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Email</td>
+                        <td><input type="email" name="email" required id="email" multiple></td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Webseite</td>
+                        <td><input type="url" name="Webseite" id="Webseite"></td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Telefonnummer</td>
+                        <td><input type="tel" name="Telefonnummer" id="Telefonnummer"></td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Geburtsdatum</td>
+                        <td><input type="date" name="date" id="date" min="1900-11-01" max="2009-11-29"></td>
+                    </tr>
+                    <!-- adresse, geschlecht & co ende -->
+                    <!-- lieblingszwerg, -biom und -mission beginn -->
+                    <tr>
+                        <td class="beOrange">Lieblingszwerg</td>
+                        <td>
+                            <select name="Lieblingszwerg" id="Lieblingszwerg" style="background-color: white;">
+                                <option value=""></option>
+                                <option value="Sc">Scout</option>
+                                <option value="Gu">Gunner</option>
+                                <option value="En">Engineer</option>
+                                <option value="Dr">Driller</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Lieblingsbiom</td>
+                        <td>
+                            <select name="Lieblingsbiom" id="Lieblingsbiom" style="background-color: white;">
+                                <option value=""></option>
+                                <option value="Sp">Salt Pits</option>
+                                <option value="Sc">Sandblasted Corridors</option>
+                                <option value="Hb">Hollow Bough</option>
+                                <option value="Aw">Azure Weald</option>
+                                <option value="Mc">Magma Core</option>
+                                <option value="Rez">Radioactive Exclusion Zone</option>
+                                <option value="Fb">Fungus Bogs</option>
+                                <option value="Cc">Crystalline Caverns</option>
+                                <option value="Db">Dense Biozone</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="beOrange">Lieblingsmission</td>
+                        <td>
+                            <select name="Lieblingsmission" id="Lieblingsmission" style="background-color: white;">
+                                <option value=""></option>
+                                <option value="Me">Mining Expedition</option>
+                                <option value="Eh">Egg Hunt</option>
+                                <option value="Osr">On-Site Refining</option>
+                                <option value="So">Salvage Operation</option>
+                                <option value="Pe">Point Extraction</option>
+                                <option value="Rez">Radioactive Exclusion Zone</option>
+                                <option value="Ed">Escort Duty</option>
+                                <option value="El">Elimination</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- lieblingszwerg, -biom und -mission ende -->
+                    <!-- feedback beginn -->
+                    <tr>
+                        <td class="beOrange">Feedback</td>
+                        <td><textarea name="Feedback" id="Feedback" cols="30" rows="6"
+                                placeholder="Feedback hier"></textarea></td>
+                    </tr>
+                    <!-- feedback ende -->
+                </table>
+                <!-- table/kontakt ende -->
+            </fieldset>
+
+            <!-- absenden und download buttons beginn -->
+            <div class="moveSend">
+                <button type="button" onclick="herunterladen()">Download</button>
+                <button type="reset">Eingaben löschen</button>
+            </div>
+            <!-- absenden und download buttons beginn -->
+        </form>
+        <!-- formular ende -->
+    </div>
+
+    <!-- blob von gutmann - checki net beginn -->
+    <script>
+        function herunterladen() {
+            var formular = document.getElementById('meinFormular');
+            var daten = new FormData(formular);
+            var obj = {};
+            daten.forEach((value, key) => {
+                obj[key] = value;
+            });
+            var json = JSON.stringify(obj, null, 2);
+            var blob = new Blob([json], { type: "application/json" });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'feedback.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+    <!-- blob von gutmann - checki net ende -->
+</body>
+
+</html>

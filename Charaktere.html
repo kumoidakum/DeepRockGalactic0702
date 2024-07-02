@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="de">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Rock Galacatic Fanpage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <!-- nav links -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url(DRG_WallpaperChars_BEORWEIT.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        /* linker div/charaktere beginn*/
+        .charaktere {
+            position: absolute;
+            max-width: 17%;
+            height: 80%;
+            top: 18vh;
+            opacity: 0.9;
+            text-align: center;
+            align-items: row;
+        }
+        
+        .scout {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 25%;
+            left: 12vh;
+            top: 8vh;
+        }
+        
+        .gunner {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 35%;
+            left: 10vh;
+            top: 26vh;
+        }
+        
+        .engi {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 30%;
+            left: 10vh;
+            top: 43vh;
+        }
+        
+        .driller {
+            position: absolute;
+            display: flex;
+            justify-content: row;
+            width: 40%;
+            left: 10vh;
+            top: 62vh;
+        }
+        
+        /* linker div/charaktere ende */
+        
+        /* rechter div/granaten beginn */
+        .rechtsGranaten {
+            position: absolute;
+            max-width: 17%;
+            height: 80%;
+            top: 18vh;
+            right: 0vh;
+            opacity: 0.9;
+            text-align: center;
+        }
+        
+        /* rechter div/granaten ende */
+        
+        /*container waffen und co beginn */
+        .infoWaffenContainer {
+            position: absolute;
+            text-align: center;
+            width: 60%;
+            height: 92%;
+            top: 8vh;
+            left: 44vh;
+            opacity: 0.9;
+        }
+        
+        .paddingBottom {
+            padding-bottom: 20px;
+        }
+
+        /* container waffen und co ende */
+        
+        /* container granaten ende */
+        .granatenMargin {
+            margin-top: 60px;
+        }
+        
+        /* i wir sunst deppat, jeder style extra - W3 TOOLTIPS - BEGINN*/
+        /* charaktere BEGINN */
+        /* scout */
+        .tooltipScout {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .scout:hover .tooltipScout {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* scout */
+
+        /* gunner */
+        .tooltipGunner {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gunner:hover .tooltipGunner {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* gunner */
+        
+        /* engineer */
+        .tooltipEngineer {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .engi:hover .tooltipEngineer {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* engineer */
+
+        /* driller */
+        .tooltipDriller {
+            visibility: hidden;
+            width: 300px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .driller:hover .tooltipDriller {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* driller */
+        /* charaktere ENDE */
+        
+        /* HauptWaffen beginn */
+        /* deepcore */
+        .tooltipDeepcore {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .deepcore:hover+.tooltipDeepcore {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* deepcore */
+
+        /* m1000 */
+        .tooltipM1000 {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .m1000:hover+.tooltipM1000 {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* m1000 */
+        
+        /* lok-1 */
+        .tooltipPlasmaCarbine {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .plasmaCarbine:hover+.tooltipPlasmaCarbine {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* lok-1 */
+        /* hauptwaffen ende */
+        
+        /* nebenwaffen beginn */
+        /* grenade launcher */
+        .tooltipShotgun {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .shotgun:hover+.tooltipShotgun {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* grenade launcher */
+        
+        /* breach cutter */
+        .tooltipZhukov {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .zhukov:hover+.tooltipZhukov {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* breach cutter */
+        
+        /* nishanka */
+        .tooltipNishanka {
+            visibility: hidden;
+            width: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 15vh;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .nishanka:hover+.tooltipNishanka {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* nishanka */
+        /* nebenwaffen ende */
+        
+        /* ausrüstung beginn */
+        /* platform gun */
+        .tooltipGrapplingHook {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .grapplingHook:hover+.tooltipGrapplingHook {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* platform gun */
+        
+        /* flareGun */
+        .tooltipFlareGun {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .flareGun:hover+.tooltipFlareGun {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* flareGun */
+        
+        /* armor */
+        .tooltipArmorDriller {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .armorScout:hover+.tooltipArmorDriller {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* armor */
+        /* ausrüstung ende */
+        
+        /* granaten BEGINN */
+        /* ifg */
+        .tooltipIfg {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .ifg:hover+.tooltipIfg {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* ifg */
+        
+        /* freezeGrenade */
+        .tooltipFreezeGrenade {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .freezeGrenade:hover+.tooltipFreezeGrenade {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* freezeGrenade */
+
+        /* pheromone */
+        .tooltipPheromone {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .pheromone:hover+.tooltipPheromone {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* pheromone */
+        
+        /* stunSweeper */
+        .tooltipStunSweeper {
+            visibility: hidden;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .stunSweeper:hover+.tooltipStunSweeper {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* granaten ENDE */
+        /* tooltips ende */
+        
+        /* klassennamen neben charakterpics beginn */
+        .scoutText {
+            color: white;
+            position: absolute;
+            left: 8vh;
+            top: 30vh;
+            font-size: 0.9rem;
+        }
+        
+        .gunnerText {
+            color: white;
+            position: absolute;
+            left: 25vh;
+            top: 45vh;
+            font-size: 0.9rem;
+        }
+        
+        .engineerText {
+            color: white;
+            position: absolute;
+            left: 8vh;
+            top: 61vh;
+            font-size: 0.9rem;
+        }
+        
+        .drillerText {
+            color: white;
+            position: absolute;
+            left: 25vh;
+            top: 80vh;
+            font-size: 0.9rem;
+        }
+        
+        /* klassennamen neben charakterpics ende */
+    </style>
+</head>
+
+<body class="fredoka-font">
+    <!-- charaktere startseite + scout in einem -->
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" href="#" id="navbardrop"
+                data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                    target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                    href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                    </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar Ende -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp -->
+    <!-- charakter div mit 4 klickbaren klassen beginn -->
+    <!-- my-3 = margin y - vertikaler abstand  -->
+    <div id="Charaktere.html" class="container p-3 my-3 bg-dark text-white charaktere">
+        <h3 style="color: #FFA500;">Charaktere</h3>
+        <div class="scout">
+            <!-- auf neue site verlinkt -->
+            <!-- charaktere ist auch scout (startseite) -->
+            <a href="Charaktere.html">
+                <img src="Assets/DRG Pics/drgScout.png" alt="Scout Pic" class="img-fluid">
+                <div class="tooltipScout">Mit einem Greifhaken und Leuchtpistole azsgestattet, um die Umgebung zu
+                    erkunden und zu beleuchten.</div>
+            </a>
+        </div>
+        <!-- gunner -->
+        <div class="gunner">
+            <a href="GunnerInfo.html">
+                <img src="Assets/DRG Pics/drgGunner.png" alt="Gunner Pic" class="img-fluid">
+                <div class="tooltipGunner">Hauptsächlich für die Bekämpfung von Feinden zuständig. Nutzt schwere
+                    Waffen
+                    wie Miniguns und Schilde.</div>
+            </a>
+        </div>
+        <!-- engineer -->
+        <div class="engi">
+            <a href="EngineerInfo.html">
+                <img src="Assets/DRG Pics/drgEngi.png" alt="Engineer Pic" class="img-fluid">
+                <div class="tooltipEngineer">Baut Türme und Plattformen. Verwendet Geschütztürme und Plattformwerfer zur
+                    Verteidigung und Unterstützung.</div>
+                </a>
+        </div>
+        <!-- driller -->
+        <div class="driller">
+            <a href="DrillerInfo.html">
+                <img src="Assets/DRG Pics/drgDriller.png" alt="Scout Pic" class="img-fluid">
+                <div class="tooltipDriller">Ausgestattet mit starken Bohrern, der Spezialist für das schnelle Graben
+                    durch das Terrain.</div>
+            </a>
+        </div>
+    </div>
+    <!-- charakter div mit 4 klickbaren klassen ende -->
+
+    <!-- scout info/hauptwaffen beginn -->
+    <!-- mb-3 für margin bottom 3, mt-5 für margin top 5  -->
+    <!-- alles in einer reihe -->
+    <div class="infoWaffenContainer bg-dark text-white">
+        <div class="row mb-3">
+            <!-- überschrift -->
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Scout Hauptwaffen</h1>
+            </div>
+        </div>
+        <!-- 3 items in einer row -->
+        <div class="row">
+            <!-- item 1 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Assault-rifle.webp" alt="deepcore" class="img-fluid deepcore">
+                <div class="tooltipDeepcore">Schnellfeuergewehr für präzise Schüsse.</div>
+                <p>Deep Core GK2</p>
+            </div>
+            <!-- item 2 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-M1000.webp" alt="M1000" class="img-fluid m1000">
+                <div class="tooltipM1000">Scharfschützengewehr für weite Entfernungen.</div>
+                <p>M1000</p>
+            </div>
+            <!-- item 3 -->
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Drak.webp" alt="drak 25 plasma" class="img-fluid plasmaCarbine">
+                <div class="tooltipPlasmaCarbine">Plasmagewehr mit hoher Feuerrate und Präzision.</div>
+                <p>Drak-25 Plasma Karabiner</p>
+            </div>
+        </div>
+        <!-- scout hauptwaffen ende -->
+
+        <!-- scout nebenwaffen beginn -->
+        <div class="row mt-5 mb-3">
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Scout Nebenwaffen</h1>
+            </div>
+        </div>
+        <!-- 3 items in einer row -->
+        <div class="row">
+            <!-- item 1 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Sawedoff-shotgun.webp" alt="shotgun" class="img-fluid shotgun">
+                <div class="tooltipShotgun">Doppelläufige Schrotflinte für hohen Nahkampfschaden.</div>
+                <p>Improvisierte Schrotflinte</p>
+            </div>
+            <!-- item 2 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Dual_machine_pistols.webp" alt="zhukov" class="img-fluid zhukov">
+                <div class="tooltipZhukov">Duale Maschinenpistolen für schnellen Schaden.</div>
+                <p>Zhukov</p>
+            </div>
+            <!-- item 3 -->
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Crossbow.webp" alt="nishanka" class="img-fluid nishanka">
+                <div class="tooltipNishanka">Armbrust mit verschiedenen Bolzen für unterschiedliche Effekte.</div>
+                <p>Nishanka Bolzenhai</p>
+            </div>
+        </div>
+        <!-- scout nebenwaffen ende -->
+
+        <!-- scout ausrüstung beginn -->
+        <div class="row mt-5 mb-3">
+            <div class="col-md-12">
+                <h1 style="color: #FFA500;">Scout Ausrüstung</h1>
+            </div>
+        </div>
+        <!-- 3 items in einer row -->
+        <div class="row">
+            <!-- item 1 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Grappling-gun.webp" alt="grappling hook"
+                    class="img-fluid grapplingHook">
+                <div class="tooltipGrapplingHook">Ermöglicht schnelles und weites Bewegen durch das Gelände.</div>
+                <p>Enterhaken</p>
+            </div>
+            <!-- item 2 -->
+            <div class="col-md-4 waffenPadding50 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/200px-Flare-gun.webp" alt="flare gun" class="img-fluid flareGun">
+                <div class="tooltipFlareGun">Schießt Leuchtkugeln, um dunkle Bereiche zu erhellen.</div>
+                <p>Leutpistole</p>
+            </div>
+            <!-- item 3 -->
+            <div class="col-md-4 paddingBottom">
+                <img src="Assets/DRG Pics/Scout/100px-Armor.webp" alt="armor" class="img-fluid armorScout">
+                <div class="tooltipArmorDriller">Verbesserte Rüstung für zusätzlichen Schutz und erweiterte
+                    Funktionalität.</div>
+                <p>Rüstung "Fuchs"</p>
+            </div>
+        </div>
+    </div>
+    <!-- scout ausrüstung ende -->
+
+    <!-- rechter div/granaten, untereinander beginn -->
+    <!-- muss position relative angeben um obere posi (absolute) zu überschreiben für tooltip über pics -->
+    <div class="container p-3 my-3 bg-dark text-white rechtsGranaten">
+        <h3 style="color: #FFA500;">Scout Granaten</h3>
+        <div>
+            <!-- item 1 -->
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Scout/150px-Grenade_ifg.webp" alt="inhibitor field generator"
+                    class="img-fluid ifg">
+                <div class="tooltipIfg">Erzeugt ein Feld, das Feinde verlangsamt.</div>
+                <p>Hemmfeld Generator</p>
+            </div>
+            <!-- item 2 -->
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Scout/150px-Grenade_freeze.webp" alt="freeze grenade"
+                    class="img-fluid freezeGrenade">
+                <div class="tooltipFreezeGrenade">Friert Feinde im Wirkungsbereich ein.</div>
+                <p>Cryo Granate</p>
+            </div>
+            <!-- item 3 -->
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Scout/150px-Grenade_pheromone.webp" alt="pheromone"
+                    class="img-fluid pheromone">
+                <div class="tooltipPheromone">Markiert Feinde, die dann von anderen Kreaturen angegriffen werden.</div>
+                <p>Pheromon Behälter</p>
+            </div>
+            <!-- item 4 -->
+            <div class="granatenMargin position-relative">
+                <img src="Assets/DRG Pics/Scout/150px-Grenade_voltaic.webp" alt="stun sweeper"
+                    class="img-fluid stunSweeper">
+                <div class="tooltipStunSweeper">Bumerang - verlangsamt Feinde und kehrt zurück.</div>
+                <p>Stromfeger</p>
+            </div>
+        </div>
+    </div>
+    <!-- rechter div/granaten untereinander ende -->
+    <!-- scout info/hauptwaffen ende -->
+
+    <!-- klassennamen -->
+    <div class="scoutText">S<br>C<br>O<br>U<br>T</div>
+    <div class="gunnerText">G<br>U<br>N<br>N<br>E<br>R</div>
+    <div class="engineerText">E<br>N<br>G<br>I<br>N<br>E<br>E<br>R</div>
+    <div class="drillerText">D<br>R<br>I<br>L<br>L<br>E<br>R</div>
+</body>
+
+</html>

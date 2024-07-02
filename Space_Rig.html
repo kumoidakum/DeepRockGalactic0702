@@ -1,0 +1,379 @@
+<!-- drg farbcodes: #FFA500 orange, #0077FF blau, #808080 grau -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Rock Galacatic Fanpage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <!-- für nav links -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .fredoka-font {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Willkommen Beginn */
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(59, 59, 59);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .spaceRigMap {
+            position: absolute;
+            top: 25vh;
+            left: 47.5vh;
+            color: white;
+            /* für text neben dem bild flexen */
+            display: flex;
+            align-items: center;
+        }
+
+        /* abstand zwischen pic und schrift */
+        .abstandSchriftMap {
+            margin-left: 2vh;
+            margin-right: 2vh;
+        }
+
+        /* positionierungen beginn */
+        .headlineSpaceRigDiv {
+            position: relative;
+            top: 50vh;
+        }
+
+        .headlineBarDiv {
+            position: relative;
+            top: 70vh;
+        }
+
+        .headlineAusrüstungDiv {
+            position: relative;
+            top: 100vh;
+        }
+
+        .headlineDeepDivesDiv {
+            position: relative;
+            top: 130vh;
+        }
+
+        .headlineShopsDiv {
+            position: relative;
+            top: 160vh;
+        }
+
+        /* positionierungen ende */
+
+        .paddingRight {
+            padding-right: 10vh;
+        }
+
+        /* textbreite begrenzen */
+        .textWidth {
+            width: 80%;
+            text-align: center;
+        }
+
+        /* zum seitenanfang */
+        .toTopLink {
+            position: absolute;
+            top: 280vh;
+            right: 20vh;
+            color: white;
+            font-size: 3vh;
+        }
+
+        /* border pic nan */
+        .borderPic {
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 0.3vh;
+        }
+    </style>
+</head>
+
+<body class="fredoka-font">
+    <!-- w3 kopiert, navbar Beginn -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- href = anker -->
+                <a class="nav-link" style="color: #FFA500;" href="index.html">Willkommen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Space_Rig.html">Space Rig</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Charaktere.html">Charaktere</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Biome.html">Biome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Missionen.html">Missionen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Deep_Dives.html">Deep Dives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gegner_Bosse.html">Gegner + Bosse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Gallerien.html">Gallerien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Feedback_Formular.html">Feedback Formular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #FFA500;" href="Stats.html">Stats pro Charakter</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #FFA500;" style="color: #FFA500;" href="#"
+                    id="navbardrop" data-toggle="dropdown">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://www.deeprockgalactic.com/"
+                        target="_blank">Zur
+                        Spielhomepage</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://store.steampowered.com/app/548430/Deep_Rock_Galactic/" target="_blank">Zur
+                        Steamseite</a>
+                    <a class="dropdown-item" style="color: #FFA500;" href="https://mod.io/g/drg" target="_blank">zu
+                        mod.io</a>
+                    <a class="dropdown-item" style="color: #FFA500;"
+                        href="https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki" target="_blank">zu Deep
+                        Rock Galactic Wiki</a>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <!-- navbar Ende -->
+
+    <div class="container p-3 my-3 text-center">
+        <h2 style="color: #FFA500;">Das Space-Rig</h2>
+    </div>
+
+    <!-- map div beginn -->
+    <div id="toTop" class="spaceRigMap borderPic">
+        <img src="Assets/DRG Pics/DRG_SpaceRig/350px-Space_Rig_Map.webp" alt="space rig map" data-toggle="tooltip"
+            title="Space Rig Karte">
+        <p class="abstandSchriftMap">Das Space Rig in "Deep Rock Galactic" ist die zentrale Basisstation der Spieler. Es
+            umfasst: <br><br>
+            <!-- https://stackoverflow.com/questions/4622808/html-changing-colors-of-specific-words-in-a-string-of-text für span tag-->
+            <span><a href="#missions" style="color: lightgreen;">Missions Areal</a></span>: Auswahl und Start von
+            Missionen. <br>
+            <span><a href="#bar" style="color: orangered;">Bar area</a></span>: Sozialer Treffpunkt mit verschiedenen
+            Bieren.<br>
+            <span><a href="#gear" style="color: orange;">Ausrüstungs Areal</a> </span>: Anpassung und Upgrades von
+            Waffen und Ausrüstung.<br>
+            <span><a href="#deepDive" style="color: rgb(113, 90, 168);">Deep Dive Areal</a></span>: Deep Dive und Elite
+            Deep Dive Terminal.<br>
+            <span><a href="#shops" style="color: rgb(153, 214, 214);">Shops Areal</a></span>: Kauf/Tausch optionen für
+            Kosmetisches.<br><br>
+            Es dient der Missionsvorbereitung und dem sozialen Austausch der Spieler.
+        </p>
+    </div>
+    <!-- map div ende -->
+
+    <!-- data-toggle="tooltip" title="infobla" -->
+    <!-- missions areal beginn -->
+    <!-- bootstrap um pics mit text nebeneinander zu bekommen -->
+    <div class="container p-3 my-3 headlineSpaceRigDiv">
+        <h2 id="missions" class="text-center"><span style="color: lightgreen;">Missions Areal</span></h2>
+        <!-- pics in eine reihe -->
+        <div class="row">
+            <!-- pic+text eingedivt für untereinander -->
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Mission_terminal.jpg"
+                    alt="mission terminal" data-toggle="tooltip" title="Missionsterminal">
+                <p class="textWidth">
+                    <span style="color: lightgreen;">Hier wählst und startest du deine nächsten spannenden
+                        Missionen.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Assignmentboard_terminal.jpg"
+                    alt="assignment terminal" data-toggle="tooltip" title="Auftragsterminal">
+                <p class="textWidth">
+                    <span style="color: lightgreen;">Am Auftragsterminal nimmst du Aufgaben wie
+                        Beförderungsqualifikationen und Saison-Missionen an.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Drop_Pod.jpg" alt="drop pod"
+                    data-toggle="tooltip" title="Drop Pod">
+                <p class="textWidth">
+                    <span style="color: lightgreen;">Der Drop Pod bringt dich zu deiner ausgewählten Mission auf Hoxxes
+                        IV.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- missions areal ende -->
+
+    <!-- bar beginn -->
+    <!-- bootstrap grid um pics mit text nebeneinander zu bekommen -->
+    <div class="container p-3 my-3 headlineSpaceRigDiv">
+        <!-- id+href - linken -->
+        <h2 id="bar" class="text-center"><span style="color: orangered;">Bar Areal</span></h2>
+        <!-- pics in eine reihe -->
+        <div class="row">
+            <!-- pic+text eingedivt für untereinander -->
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Abyss_Bar_Front.webp" alt="bar"
+                    data-toggle="tooltip" title="Abyss Bar">
+                <p class="textWidth">
+                    <span style="color: orangered;">Die Abyss Bar in "Deep Rock Galactic" ist der perfekte Ort für
+                        Zwerge,
+                        um nach harten Missionen ein Bier zu genießen, Witze zu reißen und sich bei lustigen Minispielen
+                        zu entspannen.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Jukebox.jpg" alt="Jukebox"
+                    data-toggle="tooltip" title="Die Jukebox">
+                <p class="textWidth">
+                    <span style="color: orangered;">Die Jukebox in der Abyss Bar spielt
+                        verschiedene Lieder, die die Spieler auswählen können, um die Bar-Atmosphäre zu
+                        gestalten..</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Barrel_hoop_and_counter.webp"
+                    alt="barrel hoop" data-toggle="tooltip" title="Barrel Hoop">
+                <p class="textWidth">
+                    <span style="color: orangered;">Das Barrel Hoop Minigame in der Abyss Bar lässt Spieler Fässer durch
+                        einen
+                        schwebenden Reifen werfen, um Punkte zu sammeln und sich zu messen.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- bar ende -->
+
+    <!-- ausrüstungsstation beginn -->
+    <!-- bootstrap um pics mit text nebeneinander zu bekommen -->
+    <div class="container p-3 my-3 headlineSpaceRigDiv">
+        <h2 id="gear" class="text-center"><span style="color: orange;">Ausrüstungs Areal</span></h2>
+        <!-- pics in eine reihe -->
+        <div class="row">
+            <!-- pic+text eingedivt für untereinander -->
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Equipment_Terminal.jpg"
+                    alt="equipment terminal" data-toggle="tooltip" title="Ausrüstungsterminal">
+                <p class="textWidth">
+                    <span style="color: orange;">Hier rüstest du deine Ausrüstung und Waffen für die nächste Mission
+                        aus.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Drone_Modification_Terminal.jpg"
+                    alt="drone mod terminal" data-toggle="tooltip" title="Drohnen Modifikations Terminal">
+                <p class="textWidth">
+                    <span style="color: orange;">Am Drohnen Terminal verbesserst du deine treue Drohne mit
+                        neuen Fähigkeiten.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Pickaxe_Customization_Terminal.jpg"
+                    alt="pickaxe customization terminal " data-toggle="tooltip" title="Pickaxe Modifikation Terminal">
+                <p class="textWidth">
+                    <span style="color: orange;">Mit dem Pickaxe Terminal passt du deine Spitzhacke nach
+                        deinen Wünschen an.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- ausrüstungsstation ende -->
+
+    <!-- deep dives areal beginn -->
+    <!-- bootstrap um pics mit text nebeneinander zu bekommen -->
+    <div class="container p-3 my-3 headlineSpaceRigDiv">
+        <h2 id="deepDive" class="text-center"><span style="color: rgb(113, 90, 168);">Deep Dive Areal</span></h2>
+        <!-- pics in eine reihe -->
+        <div class="row">
+            <!-- pic+text eingedivt für untereinander -->
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Deep_Dive_Terminal.jpg" alt="deep dive"
+                    data-toggle="tooltip" title="Deep Dive Terminal">
+                <p class="textWidth">
+                    <span style="color: rgb(113, 90, 168)">Eine Werkstatt für die Anpassung und Verbesserung von
+                        Ausrüstung.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-The_Forge.jpg" alt="Die Schmiede"
+                    data-toggle="tooltip" title="Die Schmiede">
+                <p class="textWidth">
+                    <span style="color: rgb(113, 90, 168);">Ein System in DRG, das "Deep Dives" bietet. Anspruchsvolle
+                        Missionen mit erhöhtem Risiko und größeren Belohnungen.
+                        Elite Deep Dives stellen die höchsten Herausforderungen dar und sind für erfahrene Spieler
+                        gedacht.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- deep dives ende -->
+
+    <!-- shops beginn -->
+    <!-- bootstrap um pics mit text nebeneinander zu bekommen -->
+    <div class="container p-3 my-3 headlineSpaceRigDiv">
+        <h2 id="shops" class="text-center"><span style="color: rgb(153, 214, 214);">Shops</span></h2>
+        <!-- pics in eine reihe -->
+        <div class="row">
+            <!-- pic+text eingedivt für untereinander -->
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-The_Shop_Terminal.jpg"
+                    alt="Accessory Shop" data-toggle="tooltip" title="Zubehör Shop">
+                <p class="textWidth">
+                    <span style="color: rgb(153, 214, 214);">Der "Zubehör Shop" ist ein Terminal, an dem du verschiedene
+                        kosmetische Gegenstände für deine Zwerge kaufen kannst.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Mineral_Trade_Terminal.jpg"
+                    alt="trade terminal" data-toggle="tooltip" title="Handel Terminal">
+                <p class="textWidth">
+                    <span style="color: rgb(153, 214, 214);">Im Auftragsterminal nimmst du Aufgaben wie die
+                        Beförderungsqualifikationen
+                        und Season Missionen an.</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="borderPic" src="Assets/DRG Pics/DRG_SpaceRig/295px-Season_Terminal.jpg" alt="drop pod"
+                    data-toggle="tooltip" title="Season Terminal">
+                <p class="textWidth">
+                    <span style="color: rgb(153, 214, 214);">Hier kannst du Handel treiben um verschiedene Ressourcen
+                        oder Gegenstände zu erwerben oder zu verkaufen.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- shops ende -->
+
+    <!-- zu seitenanfang/top - positioniert-->
+    <div class="toTopLink">
+        <p style="color: white;"><a href="#top">To Top</a></p>
+    </div>
+
+</body>
+
+</html>

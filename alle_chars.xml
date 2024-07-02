@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<characters>
+  <character>
+    <name>Missionen abgeschlossen</name>
+    <scout>544</scout>
+    <gunner>1463</gunner>
+    <engineer>499</engineer>
+    <driller>1128</driller>
+  </character>
+  <character>
+    <name>Missionszeit</name>
+    <scout>9 Tage 8 Stunden</scout>
+    <gunner>24 Tage 7 Stunden</gunner>
+    <engineer>9 Tage 3 Stunden</engineer>
+    <driller>21 Tage 6 Stunden</driller>
+  </character>
+  <character>
+    <name>Zurückgelegte Distanz</name>
+    <scout>1749 Km</scout>
+    <gunner>4638 Km</gunner>
+    <engineer>1751 Km</engineer>
+    <driller>4465 Km</driller>
+  </character>
+  <character>
+    <name>Feinde getötet</name>
+    <scout>38867</scout>
+    <gunner>261718</gunner>
+    <engineer>112328</engineer>
+    <driller>150799</driller>
+  </character>
+  <character>
+    <name>Mineralien abgebaut</name>
+    <scout>156579</scout>
+    <gunner>235383</gunner>
+    <engineer>83731</engineer>
+    <driller>286181</driller>
+  </character>
+  <character>
+    <name>Wöchentliche Aufträge</name>
+    <scout>19</scout>
+    <gunner>28</gunner>
+    <engineer>9</engineer>
+    <driller>27</driller>
+  </character>
+</characters>
+
+
+
+<!--   <Scout>
+    <missionenAbgeschlossen>544</missionenAbgeschlossen>
+    <missionszeit>8 Tage 8 Stunden</missionszeit>
+    <zurückgelegteDistanz>1749 km</zurückgelegteDistanz>
+    <kills>38867</kills>
+    <mineralien>156579 abgebaut</mineralien>
+    <weekly>19 Wöchentliche Aufträge</weekly>
+  </Scout> -->

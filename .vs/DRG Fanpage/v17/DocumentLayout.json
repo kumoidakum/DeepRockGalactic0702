@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:alle_chars.xsd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:alle_chars.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\DRG_Style.xslt||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DRG_Style.xslt||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\Stats.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Stats.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd||{DEE6CEF9-3BCA-449A-82A6-FC757D6956FB}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:alle_chars.xsd||{DEE6CEF9-3BCA-449A-82A6-FC757D6956FB}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DRG_Style.xslt",
+              "DocumentMoniker": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\DRG_Style.xslt",
+              "RelativeDocumentMoniker": "DRG_Style.xslt",
+              "ToolTip": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\DRG_Style.xslt",
+              "RelativeToolTip": "DRG_Style.xslt",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003586|",
+              "WhenOpened": "2024-06-28T12:17:31.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stats.html",
+              "DocumentMoniker": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\Stats.html",
+              "RelativeDocumentMoniker": "Stats.html",
+              "ToolTip": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\Stats.html",
+              "RelativeToolTip": "Stats.html",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAE4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-28T12:15:51.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "alle_chars.xml",
+              "DocumentMoniker": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xml",
+              "RelativeDocumentMoniker": "alle_chars.xml",
+              "ToolTip": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xml",
+              "RelativeToolTip": "alle_chars.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-28T12:05:52.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "alle_chars.xsd",
+              "DocumentMoniker": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd",
+              "RelativeDocumentMoniker": "alle_chars.xsd",
+              "ToolTip": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd",
+              "RelativeToolTip": "alle_chars.xsd",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-06-28T12:05:51.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "alle_chars.xsd [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd",
+              "RelativeDocumentMoniker": "alle_chars.xsd",
+              "ToolTip": "C:\\Users\\sasch\\OneDrive - EDU BBRZ Reha\\WebD\\Project\\DRG Fanpage\\alle_chars.xsd [Entwurf]",
+              "RelativeToolTip": "alle_chars.xsd [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-06-28T12:05:49.816Z",
+              "EditorCaption": " [Entwurf]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

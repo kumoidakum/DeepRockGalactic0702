@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="characters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="character" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="scout" type="xs:string"/>
+              <xs:element name="gunner" type="xs:int"/>
+              <xs:element name="engineer" type="xs:int"/>
+              <xs:element name="driller" type="xs:int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
